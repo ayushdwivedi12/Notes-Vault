@@ -3,7 +3,7 @@ const notesRoute = require("../src/routes/notesRoute");
 
 const express = require("express");
 const connectToMongoDB = require("./config/db");
-const rateLimiter = require("./middlewares/ratelimiter");
+const rateLimiter = require("../middlewares/ratelimiter");
 const app = express();
 const PORT = process.env.PORT || 5001;
 const cors = require("cors");
