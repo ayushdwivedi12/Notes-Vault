@@ -53,7 +53,7 @@ const NoteDetailPage = () => {
     }
     setSaving(true);
     try {
-      await api.put(`/notes/${id}`, notes);
+      await api.put(`/notes/${id}`, note);
       toast.success("Note Updated Successfully");
       navigate("/");
     } catch (error) {
@@ -115,7 +115,7 @@ const NoteDetailPage = () => {
                   className="textarea textarea-bordered h-32"
                   value={note.content}
                   onChange={(e) =>
-                    setNotes({ ...content, content: e.target.value })
+                    setNotes({ ...note, content: e.target.value })
                   }
                 />
               </div>
